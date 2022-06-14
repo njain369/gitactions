@@ -3,15 +3,15 @@ name: Hi5
 on: push
 
 jobs:
-   hi5:
-     name: Lint code base
-     runs-on: ubuntu-latest
-     steps:
-          name: Checkout code
-          uses: actions/checkout@v2
-           
-          name: Run Hi5
-          uses: github/hi5@v3
-          env:
-             DEFAULT_BRANCH: main
-             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
+  hi5:
+    name: Lint code base
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Hi5
+        uses: github/hi5@v3
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
